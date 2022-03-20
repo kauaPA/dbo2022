@@ -1,6 +1,9 @@
 <!DOCTYPE html> <html lang="pt-br"><head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Trabalho 1</title><meta charset="utf-8"> 
+<style>
+table,th,td {border: 2px solid black;}
+</style>
  </head>   
   <body>
  <header>
@@ -8,37 +11,148 @@
 <nav>
 </nav>
 <main>
-    <h1>Seja bem vindo</h1> <br>
-    <p><i>Texto teste</i> <br>
-     <b>Texto teste 2</b>
+
+    <h1>Seja bem vindo</h1>
+    <p><i>Esse é o primeiro trabalho do ano</i> <br>
+     <b>Espero que goste!</b>
     </p>
     <br>
     <ul>
             <li> Frutas
-                    <ol >
-                            <li>Banana</li>
-                            <li>Maça</li>
-                            <li>Abacate</li>
-                            </ol>
+                 <ol>
+                <li>Banana</li>
+                <li>Maça</li>
+                <li>Abacate</li>
+                 </ol>
             </li>
             <li> Vegetais
-            <ol>
+            <ol type="I">
             <li>Cebola</li>
-            <li>Pimentão</li>
+            <li>Pimentão
             <ol type="a">
-                    <li>Verde
-                    <li>Vermelho
-                    <li>Amarelo
-                   </ol>
+                <li>Verde</li>
+                <li>Vermelho</li>
+                <li>Amarelo</li>
+                </ol>
+             </li>
             <li>Tomate</li>
             </ol>
-           </li>
+            </li>
            </ul> <br>
-           <a href="https://ifrs.edu.br/" target="_blank" ><img src="ifrs.png" alt="Site IFRS"></a>
-            <figure>
-                    <img src="./img/sol.png" alt="sol">
-                    <figcaption>Imagem do Sol</figcaption>
-                    </figure>  <br>
+                    <table>
+                        <caption><b>Lucro por Mês</b></caption>
+                        <thead>
+                        <tr>
+                        <th>Mês</th>
+                        <th colspan="2">Frutas</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                            <td>       </td>
+                            <td>Banana</td>
+                            <td>Maça</td>
+                            </tr>
+                            <tr>
+                            <td>Janeiro</td>
+                            <td>100</td>
+                            <td>50</td>
+                            </tr>
+                            <tr>
+                            <td>Fevereiro</td>
+                            <td>120</td>
+                            <td>100</td>
+                            </tr>
+                            <tr>
+                            <td>Março</td>
+                            <td>120</td>
+                            <td>150</td>
+                            </tr>
+                            </tbody>
+                            <tfoot>
+                            <tr>
+                            <td>Total</td>
+                            <td>340</td>
+                            <td>300</td>
+                            </tr>
+                            </tfoot>
+                            </table>
+                            <br>
+                 <a href="https://ifrs.edu.br/" target="_blank" ><img src="ifrs.png" alt="Site IFRS"></a>
+                    <figure>
+                        <img src="./img/sol.png" alt="sol">
+                        <figcaption>Imagem do Sol</figcaption>
+                        </figure> 
+                        <br> 
+                        <br>
+                        <form>
+                                <fieldset>
+                                <legend><b>Dados:</b></legend>
+                                <label for="n"><b>Nome:</b></label>
+                                <input type="text" id="n"><br>
+                                <label for="s"><b>Senha:</b></label>
+                                <input type="password" id="s"> <br>
+                                <label for="tf"><b>Telefone:</b></label>
+                                <input type="tel" id="tf"> <br>
+                                <label for="dt"><b>Data de nascimento:</b></label>
+                                <input type="date" id="dt"> <br>
+                                <label for="em"><b>E-mail:</b></label>
+                                <input type="email" id="em"> <br>
+                                <br>
+                                <br>
+                                <fieldset>
+                                        <legend><b>Preferências:</b></legend>
+                                        <b>Navegadores que utiliza:</b> <br>
+                                               <label for="chrome">Chrome</label>
+                                               <input class="input" type="checkbox" name="navegadores"
+                                               id="chrome" value="chr">
+                                               <br>
+                                               <label for="Mozilla">Mozilla</label>
+                                               <input class="input" type="checkbox" name="navegadores"
+                                               id="Mozilla" value="mz">
+                                               <br>
+                                               <label for="Opera">Opera</label>
+                                               <input class="input" type="checkbox" name="navegadores"
+                                               id="Opera" value="ope">
+                                               <br>
+                                               <label for="MicrosoftEdge">Microsoft Edge</label>
+                                               <input class="input" type="checkbox" name="navegadores"
+                                               id="MicrosoftEdge" value="me">
+                                               <br> 
+                                               <br>
+                                        <label for="cl"><b>Cor favorita:</b></label><br>
+                                        <input type="color" id="cl"> <br> <br>
+                                        <label for="tqt"><b>Time que torce:</b></label><br>
+                                        <select id="tqt">
+                                        <option>Inter</option>
+                                        <option>Juventude</option>
+                                        <option>Caxias</option>
+                                        <option>Grêmio</option>
+                                        </select> <br> <br>
+                                        <b>Sistema operacional que utiliza:</b> <br>
+                                               <label for="Windows">Windows</label>
+                                               <input class="input" type="radio" name="sistema operacional"
+                                               id="Windows" value="w">
+                                               <br>
+                                               <label for="Mac">Mac</label>
+                                               <input class="input" type="radio" name="sistema operacional"
+                                               id="Mac" value="m">
+                                               <br>
+                                               <label for="Linux">Linux</label>
+                                               <input class="input" type="radio" name="sistema operacional"
+                                               id="Linux" value="l">
+                                               <br>
+                                        </fieldset> <br> <br>
+                                        <input type = "submit" value = "enviar"><br>
+                                        </fieldset>
+                                        </form>
+                                        <br>
+                                        <br>
+                                        <iframe width="420" height="315"
+                                         src="https://www.youtube.com/embed/5xLrrfVnffs" allowfullscreen>
+                                        </iframe>
+                                
+
 </main>        
 <footer>
  </footer>    
