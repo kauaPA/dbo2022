@@ -1,0 +1,45 @@
+@font-face {
+    font-family: 'potter';
+    src: url(ParryHotter.ttf) format('opentype'); 
+    font-weight: normal;
+    font-style: normal;
+    
+}
+body{
+    background-image: url('casas2.png');
+    background-size: cover;
+    
+    
+}
+#casas {
+    position: absolute;
+    top: 25vw;
+    left:38vw;
+    width: 20vw;
+    height: 10vw;
+    text-align: center;
+    background-size: cover;
+    border: 3px solid black;
+    font-size:larger;
+    font-family: 'potter' ;
+    
+    
+   }
+ #enviar{
+    position: absolute;
+    top: 27vw;
+    left:73vw;
+    width: 15vw;
+    height: 8vw;
+    text-align: center;
+    background-size: cover;
+    font-size:larger;
+    font-family: 'potter' ;
+ }
+ #painel{
+    background-color: white;
+ }
+ #mostra{
+    color: white;
+ }
+
