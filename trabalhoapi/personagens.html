@@ -1,0 +1,113 @@
+<!DOCTYPE HTML>
+<html lang="pt-br">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+    <title>Personagens</title>
+    <link rel="stylesheet" href="personagens.css">
+</head>
+<body>
+ 
+
+<select name="personagens" id="personagens">
+
+    <option value="0">Personagens</option>
+    
+    <option value="4">Harry Potter</option>
+
+    <option value="85">Hermione Granger</option>
+
+    <option value="443">Ron Weasley</option>
+
+    <option value="46">Neville</option>
+
+    <option value="286">Luna Lovegood</option>
+
+    <option value="150">Cedric Diggory</option>
+
+    <option value="37">Draco Malfoy</option>
+
+    <option value="401">Hagrid</option>
+
+    <option value="466">Severus Snape</option>
+
+    <option value="11">Sirius Black</option>
+
+</select>
+    <input type="button" value="Enviar" id="enviar"><br>
+
+    <div id="mostra"></div>
+
+    
+  
+
+  <script>
+     document.querySelector('#enviar').addEventListener('click',consulta);
+    let personagem=""
+    
+    async function consulta(){
+        
+         personagem = document.querySelector('#personagens').value;
+        
+
+        const url='https://legacy--api.herokuapp.com/api/v1/characters/'+personagem;
+        try{
+            let resposta=  await fetch(url);
+            let js = await resposta.json();
+            console.log(js)
+            mostraDados(js);
+        }catch {
+            console.log("erro")
+        }
+    }       
+    function mostraDados(js){
+        const painel = document.querySelector('#mostra');
+        let texto= "<h1>Dados solicitados</h1>";
+        texto=texto + "Data de Nascimento: "+ js.born+"<br>";
+        texto=texto + "Sangue: " + js.blood+"<br>";
+        texto=texto + "Patrono: "+ js.patronus+"<br>";
+        texto=texto + "bicho-papão: "+ js.boggart+"<br>";
+       
+        
+
+    
+        painel.innerHTML = texto;
+       
+
+        if(personagem=="4"){
+            document.body.style.backgroundImage = "url('harry.png')";
+        }
+        if(personagem=="85"){
+            document.body.style.backgroundImage = "url('hermione3.png')";
+        }
+        if(personagem=="443"){
+            document.body.style.backgroundImage = "url('ron.png')";
+        }
+        if(personagem=="46"){
+            document.body.style.backgroundImage = "url('neville.png')";
+        }
+        if(personagem=="286"){
+            document.body.style.backgroundImage = "url('luna.png')";
+        }
+        if(personagem=="150"){
+            document.body.style.backgroundImage = "url('cedric3.png')";
+        }
+        if(personagem=="37"){
+            document.body.style.backgroundImage = "url('draco4.png')";
+        }
+        if(personagem=="401"){
+            document.body.style.backgroundImage = "url('hagrid2.png')";
+        }
+        if(personagem=="466"){
+            document.body.style.backgroundImage = "url('snape2.png')";
+        }
+        if(personagem=="11"){
+            document.body.style.backgroundImage = "url('black2.png')";
+        }
+    }
+    
+    
+</script>
+</body>
+</html>
